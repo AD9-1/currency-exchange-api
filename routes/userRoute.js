@@ -117,7 +117,7 @@ router.post("/sendMoney/:userId", authorize, async (req, res) => {
       });
       return res
         .status(200)
-        .json({ userId: userInfoNewId[0], username: getName[0].name });
+        .json({ userInfoId: userInfoNewId[0], username: getName[0].name });
     }
   } catch (error) {
     return res.status(403).json({ message: `${error}` });
